@@ -1,0 +1,148 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Stadacona Technologies is a Canadian and NATO-focused defence technology company building AI-native, modular, and scalable systems with Canadian supply chain strength."
+    />
+    <title>Stadacona Technologies</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="container header-inner">
+        <a class="brand" href="#home" aria-label="Stadacona Technologies home">
+          <span class="brand-mark">ST</span>
+          <span class="brand-text">Stadacona Technologies</span>
+        </a>
+
+        <nav class="main-nav" aria-label="Main navigation">
+          <a href="#home">Home</a>
+          <a href="#about">About</a>
+          <a href="#contact">Contact Us</a>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <section id="home" class="hero">
+        <div class="container hero-grid">
+          <div class="hero-copy reveal-up">
+            <p class="eyebrow">Canadian Defence Technology</p>
+            <h1>Protecting sovereignty through adaptive mission technology.</h1>
+            <p class="lead">
+              Stadacona Technologies builds AI-native, modular, and scalable systems for
+              Canada and NATO partners.
+            </p>
+            <div class="hero-actions">
+              <a class="button button-primary" href="#contact">Contact Us</a>
+              <a class="button button-secondary" href="#about">About Us</a>
+            </div>
+          </div>
+
+          <div class="hero-graph" aria-label="Core capability map">
+            <span class="graph-label top">Autonomous Systems</span>
+            <span class="graph-label left">Advanced Robotics</span>
+            <span class="graph-label right">Embodied AI</span>
+
+            <div class="node-lines" aria-hidden="true"></div>
+
+            <article class="graph-node node-top reveal-pop delay-1" aria-label="Autonomous systems">
+              <div class="icon-wrap">
+                <svg viewBox="0 0 24 24" role="img" aria-hidden="true">
+                  <path d="M4 20h16" />
+                  <path d="M12 4v10" />
+                  <path d="M7 10l5-6 5 6" />
+                  <circle cx="12" cy="14" r="2.5" />
+                </svg>
+              </div>
+            </article>
+
+            <article class="graph-node node-left reveal-pop delay-2" aria-label="Advanced robotics">
+              <div class="icon-wrap">
+                <svg viewBox="0 0 24 24" role="img" aria-hidden="true">
+                  <path d="M12 4v4" />
+                  <path d="M7 9v3" />
+                  <path d="M17 9v3" />
+                  <path d="M5 14h14" />
+                  <path d="M7 14v5" />
+                  <path d="M12 14v5" />
+                  <path d="M17 14v5" />
+                </svg>
+              </div>
+            </article>
+
+            <article class="graph-node node-right reveal-pop delay-3" aria-label="Embodied AI">
+              <div class="icon-wrap">
+                <svg viewBox="0 0 24 24" role="img" aria-hidden="true">
+                  <path d="M12 4v16" />
+                  <path d="M4 12h16" />
+                  <path d="M7 7l10 10" />
+                  <path d="M17 7L7 17" />
+                </svg>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section id="about" class="section">
+        <div class="container">
+          <div class="section-head reveal-up">
+            <h2>Built for serious mission outcomes</h2>
+            <p>
+              We focus on deployable systems that combine software speed with hardware reality.
+              Our approach emphasizes trusted Canadian supply chains and practical interoperability
+              across allied environments.
+            </p>
+          </div>
+
+          <div class="pillars" role="list" aria-label="Core focus areas">
+            <article class="pillar reveal-pop" role="listitem">
+              <h3>AI-Native</h3>
+              <p>Designed from first principles to integrate intelligent, adaptive capability.</p>
+            </article>
+            <article class="pillar reveal-pop" role="listitem">
+              <h3>Modularity</h3>
+              <p>Composable architecture that can be configured for varied missions quickly.</p>
+            </article>
+            <article class="pillar reveal-pop" role="listitem">
+              <h3>Scalability</h3>
+              <p>From pilot to deployment without forcing full-system redesign.</p>
+            </article>
+            <article class="pillar reveal-pop" role="listitem">
+              <h3>Canadian Supply Chain</h3>
+              <p>Built with trusted domestic capability and NATO-aligned interoperability.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section id="contact" class="section section-contact">
+        <div class="container contact-card reveal-up">
+          <h2>Contact Us</h2>
+          <p>For inquiries, contact us directly:</p>
+          <a class="contact-link" href="mailto:contact@stadaconatech.com"
+            >contact@stadaconatech.com</a
+          >
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-inner">
+        <p>© <span id="year"></span> Stadacona Technologies. All rights reserved.</p>
+      </div>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
