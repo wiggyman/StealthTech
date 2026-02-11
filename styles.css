@@ -163,19 +163,26 @@ body {
   scrollbar-width: thin;
 }
 .capability-card {
-  border: 1px solid rgba(17, 31, 59, 0.85);
+  border: 1px solid rgba(162, 182, 226, 0.34);
   border-radius: 12px;
-  background: #d9dde3;
-  color: #111722;
+  background: rgba(6, 12, 22, 0.54);
+  color: #eaf0ff;
+  backdrop-filter: blur(3px);
   padding: 1.5rem;
   min-height: 238px;
 }
-.mini-icon { width: 46px; height: 46px; border: 2px solid var(--accent); margin-bottom: 1rem; position: relative; }
-.mini-icon::before, .mini-icon::after { content: ""; position: absolute; background: var(--accent); opacity: 0.7; }
-.mini-icon::before { inset: 0 50% 0 auto; width: 1px; }
-.mini-icon::after { inset: 50% 0 auto 0; height: 1px; }
-.capability-card h3 { margin: 0 0 0.5rem; font-size: 1.95rem; line-height: 1.05; }
-.capability-card p { margin: 0; font-size: 1.08rem; line-height: 1.45; color: #202835; }
+.capability-icon {
+  width: 48px;
+  height: 48px;
+  margin-bottom: 1rem;
+  stroke: #dce7ff;
+  fill: none;
+  stroke-width: 1.35;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+.capability-card h3 { margin: 0 0 0.5rem; font-size: 1.95rem; line-height: 1.05; color: #f4f7ff; }
+.capability-card p { margin: 0; font-size: 1.08rem; line-height: 1.45; color: #c3cee2; }
 
 .about-panel {
   margin-top: 1rem;
