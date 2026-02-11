@@ -42,8 +42,8 @@ body {
 
 .brand { color: #fff; text-decoration: none; font-weight: 700; display: flex; align-items: center; gap: 0.2rem; font-size: clamp(1.45rem, 1.65vw, 2.15rem); letter-spacing: 0.01em; text-transform: uppercase; }
 .brand-mark { display: none; }
-.main-nav { display: flex; gap: 1.25rem; }
-.main-nav a { color: #e2e6ef; text-decoration: none; font-weight: 700; font-size: clamp(1.1rem, 0.95vw, 1.32rem); }
+.main-nav { display: flex; gap: clamp(1.5rem, 2.2vw, 2.6rem); }
+.main-nav a { color: #e2e6ef; text-decoration: none; font-weight: 700; font-size: clamp(1.22rem, 1.1vw, 1.52rem); letter-spacing: 0.02em; }
 .main-nav a:hover { color: #fff; }
 
 .hero {
@@ -232,7 +232,7 @@ body {
 .panel-media {
   min-height: 280px;
   background-image: linear-gradient(to right, rgba(7, 12, 20, 0.15), rgba(7, 12, 20, 0.72)),
-    url("https://images.unsplash.com/photo-1473968512647-3e447244af8f?auto=format&fit=crop&w=1600&q=80");
+    url("https://images.unsplash.com/photo-1469474968028-56623f02e42e?auto=format&fit=crop&w=1600&q=80");
   background-size: cover;
   background-position: center;
 }
