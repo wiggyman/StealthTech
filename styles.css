@@ -143,12 +143,13 @@ body {
 }
 
 .vertex svg {
-  width: 44%;
+  width: 45%;
   stroke: #f5f7fd;
   fill: none;
-  stroke-width: 1.3;
+  stroke-width: 1.55;
   stroke-linecap: round;
   stroke-linejoin: round;
+  filter: drop-shadow(0 0 8px rgba(197, 216, 255, 0.2));
 }
 
 .vertex-top { top: 66px; left: 50%; transform: translateX(-50%); }
