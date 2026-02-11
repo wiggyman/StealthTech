@@ -8,7 +8,7 @@
 html { scroll-behavior: smooth; }
 body {
   margin: 0;
-  font-family: "Inter", system-ui, sans-serif;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
   color: var(--text);
   background: #04060b;
   overflow-x: hidden;
@@ -43,7 +43,7 @@ body {
 .brand { color: #fff; text-decoration: none; font-weight: 700; display: flex; align-items: center; gap: 0.2rem; font-size: clamp(1.45rem, 1.65vw, 2.15rem); letter-spacing: 0.01em; text-transform: uppercase; }
 .brand-mark { display: none; }
 .main-nav { display: flex; gap: 1.25rem; }
-.main-nav a { color: #e2e6ef; text-decoration: none; font-weight: 700; font-size: clamp(0.95rem, 0.75vw, 1.06rem); }
+.main-nav a { color: #e2e6ef; text-decoration: none; font-weight: 700; font-size: clamp(1.1rem, 0.95vw, 1.32rem); }
 .main-nav a:hover { color: #fff; }
 
 .hero {
