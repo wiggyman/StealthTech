@@ -163,6 +163,8 @@ body {
   scrollbar-width: thin;
 }
 .capability-card {
+  position: relative;
+  overflow: hidden;
   border: 1px solid rgba(162, 182, 226, 0.34);
   border-radius: 12px;
   background: rgba(6, 12, 22, 0.54);
@@ -170,6 +172,30 @@ body {
   backdrop-filter: blur(3px);
   padding: 1.5rem;
   min-height: 238px;
+  transition: transform 240ms ease, border-color 240ms ease, background-color 240ms ease, box-shadow 240ms ease;
+}
+.capability-card::after {
+  content: "";
+  position: absolute;
+  inset: auto -25% -60% -25%;
+  height: 130px;
+  background: radial-gradient(ellipse at center, rgba(146, 176, 236, 0.28), rgba(146, 176, 236, 0));
+  opacity: 0;
+  transform: translateY(22px);
+  transition: opacity 240ms ease, transform 240ms ease;
+  pointer-events: none;
+}
+.capability-card:hover,
+.capability-card:focus-within {
+  transform: translateY(-6px);
+  border-color: rgba(194, 214, 255, 0.74);
+  background: rgba(9, 16, 30, 0.76);
+  box-shadow: 0 10px 28px rgba(5, 10, 22, 0.45);
+}
+.capability-card:hover::after,
+.capability-card:focus-within::after {
+  opacity: 1;
+  transform: translateY(0);
 }
 .capability-icon {
   width: 48px;
@@ -180,9 +206,19 @@ body {
   stroke-width: 1.35;
   stroke-linecap: round;
   stroke-linejoin: round;
+  transition: transform 240ms ease, stroke 240ms ease;
 }
-.capability-card h3 { margin: 0 0 0.5rem; font-size: 1.95rem; line-height: 1.05; color: #f4f7ff; }
-.capability-card p { margin: 0; font-size: 1.08rem; line-height: 1.45; color: #c3cee2; }
+.capability-card:hover .capability-icon,
+.capability-card:focus-within .capability-icon {
+  transform: translateY(-2px) scale(1.06);
+  stroke: #ffffff;
+}
+.capability-card h3 { margin: 0 0 0.5rem; font-size: 1.95rem; line-height: 1.05; color: #f4f7ff; transition: color 240ms ease; }
+.capability-card p { margin: 0; font-size: 1.08rem; line-height: 1.45; color: #c3cee2; transition: color 240ms ease; }
+.capability-card:hover p,
+.capability-card:focus-within p {
+  color: #d9e4fa;
+}
 
 .about-panel {
   margin-top: 1rem;
@@ -248,4 +284,11 @@ body {
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after { animation-duration: 0.01ms !important; animation-iteration-count: 1 !important; transition-duration: 0.01ms !important; }
   .reveal-up, .reveal-pop { opacity: 1; }
+  .capability-card,
+  .capability-card::after,
+  .capability-icon,
+  .capability-card h3,
+  .capability-card p {
+    transition: none !important;
+  }
 }
