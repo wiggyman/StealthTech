@@ -23,6 +23,43 @@ body {
   background: radial-gradient(circle at 84% 0%, #15294d 0%, var(--bg) 40%);
   color: var(--text);
   line-height: 1.6;
+  position: relative;
+  overflow-x: hidden;
+  isolation: isolate;
+}
+
+
+body::before,
+body::after {
+  content: "";
+  position: fixed;
+  inset: -20vmax;
+  pointer-events: none;
+  z-index: 0;
+}
+
+body::before {
+  background:
+    radial-gradient(circle at 18% 24%, rgb(126 169 255 / 22%) 0, transparent 34%),
+    radial-gradient(circle at 78% 18%, rgb(255 60 60 / 16%) 0, transparent 38%),
+    radial-gradient(circle at 45% 78%, rgb(126 169 255 / 14%) 0, transparent 36%);
+  filter: blur(24px);
+  animation: float-field 16s ease-in-out infinite alternate;
+}
+
+body::after {
+  background:
+    radial-gradient(circle at 20% 75%, rgb(255 60 60 / 8%) 0, transparent 42%),
+    radial-gradient(circle at 86% 72%, rgb(126 169 255 / 10%) 0, transparent 44%);
+  filter: blur(36px);
+  animation: drift-field 22s linear infinite;
+}
+
+.site-header,
+main,
+.site-footer {
+  position: relative;
+  z-index: 1;
 }
 
 .container {
@@ -385,6 +422,25 @@ h1 {
   }
 }
 
+
+@keyframes float-field {
+  0% {
+    transform: translate3d(0, 0, 0) scale(1);
+  }
+  100% {
+    transform: translate3d(2.5vw, -1.5vh, 0) scale(1.06);
+  }
+}
+
+@keyframes drift-field {
+  0% {
+    transform: translate3d(0, 0, 0) rotate(0deg);
+  }
+  100% {
+    transform: translate3d(-2vw, 1vh, 0) rotate(5deg);
+  }
+}
+
 @media (max-width: 980px) {
   .hero-grid {
     grid-template-columns: 1fr;
@@ -449,5 +505,10 @@ h1 {
   .reveal-up,
   .reveal-pop {
     opacity: 1;
+  }
+
+  body::before,
+  body::after {
+    animation: none !important;
   }
 }
